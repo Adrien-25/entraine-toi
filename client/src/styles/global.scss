@@ -1,20 +1,15 @@
-/*---------------------- Couleurs ------------------------*/
-// Couleurs principales
-$color-primary: #7e2a2b;
-$color-secondary: #ffffff;
+/*---------------------- Import ------------------------*/
+@import './auth';
+@import "./profile";
+@import "variables";
 
-// Couleurs secondaires
-$color-secondary-1: #201a1a;
-$color-secondary-2: #ffb3b0;
-$color-secondary-3: #412d05;
-$no-color: transparent;
 
-/*---------------------- Typographie ------------------------*/
-// Police de caractère - Variable
-$font-family: "Poppins", sans-serif;
+
+/*---------------------- Police de caractère ------------------------*/
 
 // Couleur de la Police
 p,
+span,
 h1,
 h2,
 h3,
@@ -81,7 +76,14 @@ p.smaller {
 /*---------------------- Global ------------------------*/
 // Transition - Variable
 $transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+#root {
+  height: 100vh;
 
+  .container {
+    height: 100%;
+    padding: 10px;
+  }
+}
 #root {
   background-color: $color-primary;
 }
@@ -201,7 +203,10 @@ select:-webkit-autofill:focus {
   max-width: 150px;
 }
 
+
+
 /*---------------------- Barre de Navigation ------------------------*/
+
 // Header
 header {
   width: 100%;
@@ -210,7 +215,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  .logo-container{
+  .logo-container {
     width: 65px;
     height: 65px;
     display: flex;

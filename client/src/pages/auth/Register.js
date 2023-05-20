@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate, useLocation } from "react-router-dom";
-import "../../styles/auth.scss";
+// import "../../styles/auth.scss";
 import { useAuth } from "../../context/auth";
 import logo from "../../assets/logo-entraine-toi.png";
 
@@ -9,9 +9,9 @@ const Register = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [phone, setPhone] = useState("");
-  const [address, setAddress] = useState("");
-  const [answer, setAnswer] = useState("");
+  // const [phone, setPhone] = useState("");
+  // const [address, setAddress] = useState("");
+  // const [answer, setAnswer] = useState("");
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -27,9 +27,9 @@ const Register = () => {
           name,
           email,
           password,
-          phone,
-          address,
-          answer,
+          // phone,
+          // address,
+          // answer,
         }
       );
       if (res.data.success) {

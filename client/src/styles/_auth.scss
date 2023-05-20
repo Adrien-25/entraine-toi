@@ -1,0 +1,34 @@
+.register {
+  height: 100%;
+
+  .register-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 95%;
+    margin: 0 auto;
+
+    .entete {
+      width: 342px;
+    }
+    form {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      width: 100%;
+      max-width: 342px;
+      gap: 20px;
+
+      > div {
+        width: 100%;
+        > .MuiTextField-root {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
