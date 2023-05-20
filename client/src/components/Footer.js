@@ -28,7 +28,7 @@ const Footer = () => {
             <a href="/register"><DieteIcon/></a>
           </li>
           <li>
-            <a href="/register"><PersonIcon/></a>
+            <a href="/register"><CalendarIcon/></a>
           </li>
           {/* <li onClick={logOut}>Se déconnecter</li> */}
         </ul>
