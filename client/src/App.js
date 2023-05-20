@@ -1,3 +1,5 @@
+import "./styles/global.scss";
+
 import React, { useEffect } from "react";
 import { Routes, Route, useLocation, useNavigate } from "react-router-dom";
 import Header from "./components/Header";
@@ -9,7 +11,6 @@ import CreationEntrainement from "./pages/CreationEntrainement";
 import GestionEntrainement from "./pages/GestionEntrainement";
 import GestionDiete from "./pages/GestionDiete";
 import Profil from "./pages/Profil";
-import "./styles/global.scss";
 // import { useAuth } from "./context/auth";
 
 function App() {
