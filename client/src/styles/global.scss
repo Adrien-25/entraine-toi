@@ -1,3 +1,4 @@
+/*---------------------- Couleurs ------------------------*/
 // Couleurs principales
 $color-primary: #7e2a2b;
 $color-secondary: #ffffff;
@@ -6,34 +7,13 @@ $color-secondary: #ffffff;
 $color-secondary-1: #201a1a;
 $color-secondary-2: #ffb3b0;
 $color-secondary-3: #412d05;
-
 $no-color: transparent;
 
-// Typographie - Desktop
+/*---------------------- Typographie ------------------------*/
+// Police de caractère - Variable
 $font-family: "Poppins", sans-serif;
 
-// Transition
-$transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-
-#root {
-  background-color: $color-primary;
-}
-* {
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  box-sizing: border-box;
-}
-button {
-  cursor: pointer;
-}
-.button {
-  background-color: $color-secondary-1;
-  color: $color-secondary;
-  padding: 18px 0;
-  border-radius: 30px;
-  border: none;
-}
+// Couleur de la Police 
 p,
 h1,
 h2,
@@ -41,9 +21,10 @@ h3,
 h4,
 h5,
 h6 {
-  color: white;
+  color: $color-secondary;
 }
 
+// Taille de la Police 
 h1 {
   font-size: 3.5rem;
   line-height: 4rem;
@@ -96,6 +77,36 @@ p.smaller {
 .text-right {
   text-align: right;
 }
+
+/*---------------------- Global ------------------------*/
+// Transition - Variable 
+$transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+
+#root {
+  background-color: $color-primary;
+}
+* {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+// Bouton
+button {
+  cursor: pointer;
+  background-color: $no-color;
+  border: 0;
+}
+.button {
+  background-color: $color-secondary-1;
+  color: $color-secondary;
+  padding: 18px 0;
+  border-radius: 30px;
+  border: none;
+}
+
+// Mise en forme
 .d-flex {
   display: flex;
 }
@@ -122,6 +133,7 @@ p.smaller {
   transform: translateY(-50%);
 }
 
+// Input
 input {
   padding: 14px 21px;
   color: $color-secondary !important;
@@ -160,6 +172,8 @@ select:-webkit-autofill:focus {
   -webkit-box-shadow: 0 0 0px 1000px $color-primary inset;
   transition: background-color 5000s ease-in-out 0s;
 }
+
+// Lien
 .link {
   text-decoration: underline;
   background-color: transparent;
@@ -167,22 +181,38 @@ select:-webkit-autofill:focus {
   border: 0;
   padding: 0 5px;
 }
+
+// Icônes
 .icon {
   background-color: transparent;
   border: 0;
   color: $color-secondary;
   cursor: pointer;
 }
-.logo-petit {
+
+// Logo
+.logo-smaller {
+  max-width: 50px;
+}
+.logo-small {
   max-width: 100px;
 }
 .logo-medium {
   max-width: 150px;
 }
+
+/*---------------------- Barre de Navigation ------------------------*/
+// Header
 header {
   width: 100%;
   background-color: rosybrown;
+  padding: 20px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
+
+// Footer
 footer {
   position: fixed;
   z-index: 99;
