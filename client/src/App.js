@@ -4,6 +4,7 @@ import React, { useEffect } from "react";
 import { Routes, Route, useLocation, useNavigate } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+
 import Dashboard from "./pages/Dashboard";
 import Login from "./pages/auth/Login";
 import Register from "./pages/auth/Register";
@@ -11,6 +12,11 @@ import CreationEntrainement from "./pages/CreationEntrainement";
 import GestionEntrainement from "./pages/GestionEntrainement";
 import GestionDiete from "./pages/GestionDiete";
 import Profil from "./pages/Profil";
+
+import MesInformations from "./pages/profil/MesInformations";
+import ReglagesGeneraux from "./pages/profil/ReglagesGeneraux";
+import Notifications from "./pages/profil/Notifications";
+import Aide from "./pages/profil/Aide";
 // import { useAuth } from "./context/auth";
 
 function App() {
@@ -69,7 +75,15 @@ function App() {
             element={<GestionEntrainement />}
           />
           <Route path="/gestion-diete" element={<GestionDiete />} />
-          <Route path="/profil" element={<Profil />} />
+
+          <Route path="/profil/" element={<Profil />} />
+          <Route
+            path="/profil/mes-informations"
+            element={<MesInformations />}
+          />
+          <Route path="/profil/reglages-generaux" element={<ReglagesGeneraux />} />
+          <Route path="/profil/notifications" element={<Notifications />} />
+          <Route path="/profil/aide" element={<Aide />} />
         </Routes>
       </div>
       {shouldRenderHeaderFooter && <Footer />}

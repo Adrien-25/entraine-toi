@@ -6,68 +6,105 @@ import CloseIcon from "@mui/icons-material/Close";
 import QuestionMarkIcon from "@mui/icons-material/QuestionMark";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import SettingsIcon from "@mui/icons-material/DisplaySettings";
-import styles from '../styles/_profile.module.scss';
+// import CreateIcon from "@mui/icons-material/Create";
+import styles from "../styles/_profile.module.scss";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import {  useNavigate } from "react-router-dom";
+
+// import MesInformations from './profil/MesInformations';
+// import ReglagesGeneraux from './profil/ReglagesGeneraux';
+// import Notifications from './profil/Notifications';
+// import Aide from './profil/Aide';
 
 const Profil = () => {
-  return (
-//     <div className={styles.profile}>
-//   {/* ... contenu de votre composant ... */}
-//   <div className={styles.presentation}>
-//     {/* ... autres éléments ... */}
-//     <div className={styles.personnalisation}>
-//       {/* ... autres éléments ... */}
-//       <ul className={styles['personnalisation-list']}>
-//         {/* ... autres éléments ... */}
-//         <li className={styles['personnalisation-item']}>
-//           {/* ... contenu de chaque élément ... */}
-//           <div className={styles['MuiSvgIcon-root']}>
-//             {/* ... contenu de l'icône ... */}
-//           </div>
-//         </li>
-//         {/* ... autres éléments ... */}
-//       </ul>
-//     </div>
-//   </div>
-// </div>
+  const navigate = useNavigate();
+  // const location =  useLocation();
+  // const { pathname } = location;
 
+  const navigateToInformations = () => {
+    navigate('mes-informations');
+  };
+  const navigateToReglages = () => {
+    navigate('reglages-generaux');
+  };
+  const navigateToNotifications = () => {
+    navigate('notifications');
+  };
+  const navigateToAide = () => {
+    navigate('aide');
+  };
+
+  const logOut = () => {
+    localStorage.removeItem("auth");
+    navigate("/login");
+  };
+  
+  return (
     <div className={styles.profile}>
+ 
       <h1>Profil</h1>
       <div className={styles.presentation}>
-        <div className="general">
-          <div className="image-profil"></div>
+        <div className={styles["general"]}>
+          <div className={styles["imageProfil"]}>
+            <AccountCircleIcon />
+          </div>
+          <div className={styles["information"]}>
+            <p>
+              <span className="prenom">Adrien</span>
+              <span> </span>
+              <span className="nom">SCHMIDT</span>
+            </p>
+            <p>
+              <span className="age">25</span>
+              <span className="annee">ans</span>
+            </p>
+          </div>
         </div>
-        <div className="measures">
-          <ul>
-            <li className="mesure"></li>
-            <li className="mesure"></li>
-            <li className="mesure"></li>
-          </ul>
-        </div>
+        <ul className={styles["mesures"]}>
+          <li>
+            <span>Taille</span>
+            <strong>
+              <span>190</span>
+              <span> cm</span>
+            </strong>
+          </li>
+          <li>
+            <span>Poids actuel</span>
+            <strong>
+              <span>96</span>
+              <span> kg</span>
+            </strong>
+          </li>
+          <li>
+            <span>Objectif</span>
+            <strong>Stabiliser mon poids</strong>
+          </li>
+        </ul>
       </div>
       <div className={styles.personnalisation}>
-        <ul className={styles['personnalisation-list']}>
-          <li className={styles['personnalisation-item']}>
-            <PersonIcon color="white" />
+        <ul className={styles["personnalisation-list"]}>
+          <li className={styles["personnalisation-item"]} onClick={navigateToInformations}>
+            <PersonIcon />
             <span>Mes informations</span>
-            <FlecheDroite color="white" />
+            <FlecheDroite />
           </li>
-          <li className={styles['personnalisation-item']}>
-            <SettingsIcon color="white" />
+          <li className={styles["personnalisation-item"]} onClick={navigateToReglages}>
+            <SettingsIcon />
             <span>Réglages Généraux</span>
             <FlecheDroite color="white" />
           </li>
-          <li className={styles['personnalisation-item']}>
-            <NotificationsIcon color="white" />
+          <li className={styles["personnalisation-item"]} onClick={navigateToNotifications}>
+            <NotificationsIcon />
             <span>Notifications</span>
-            <FlecheDroite color="action" />
+            <FlecheDroite color="white" />
           </li>
-          <li className={styles['personnalisation-item']}>
-            <QuestionMarkIcon color="white" />
+          <li className={styles["personnalisation-item"]} onClick={navigateToAide}>
+            <QuestionMarkIcon />
             <span>Aide</span>
             <FlecheDroite color="white" />
           </li>
-          <li className={styles['personnalisation-item']}>
-            <CloseIcon color="white" />
+          <li className={styles["personnalisation-item"]} onClick={logOut}>
+            <CloseIcon />
             <span>Déconnexion</span>
           </li>
         </ul>

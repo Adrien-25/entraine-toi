@@ -5,33 +5,76 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+
   .presentation {
     background-color: $color-secondary-1;
     border-radius: 10px;
+    padding: 20px;
+
+    .general {
+      border-bottom: 1px solid hsla(0, 0%, 100%, 0.2);
+      display: flex;
+      padding-bottom: 20px;
+      .imageProfil {
+        > svg {
+          font-size: 50px;
+          color: white;
+        }
+      }
+      .information {
+        padding-left: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+      }
+    }
+
+    .mesures {
+      & > li {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 20px;
+      }
+    }
   }
   .personnalisation {
     background-color: $color-secondary-1;
     border-radius: 10px;
+    padding: 0 20px;
 
     .personnalisation-list {
+      list-style-type: none;
+
       .personnalisation-item {
         color: white;
         padding: 20px 0;
-        margin: 0 20px;
         display: flex;
         justify-content: space-between;
-        border-bottom: 1px solid $color-secondary-2;
+        border-bottom: 1px solid hsla(0, 0%, 100%, 0.2);
 
-        &:last-child{
+        
+        svg:first-child {
+          color: $color-secondary-2;
+        }
+
+        span {
+          width: 100%;
+          padding-left: 20px;
+          display: flex;
+          align-items: center;
+        }
+        svg:first-child {
+          color: $color-secondary-2;
+        }
+
+        &:last-child {
           border: 0;
         }
-        .MuiSvgIcon-root{
+
+        .MuiSvgIcon-root {
           color: white;
         }
       }
-   
-
     }
   }
 }
- 

@@ -1,19 +1,19 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import TrainingIcon from '@mui/icons-material/FitnessCenter';
 import DieteIcon from '@mui/icons-material/DinnerDining';
 import CalendarIcon from '@mui/icons-material/CalendarMonth';
 import DashboardIcon from '@mui/icons-material/Dashboard';
-import AddIcon from '@mui/icons-material/Add';
-import PersonIcon from '@mui/icons-material/Person';
+// import AddIcon from '@mui/icons-material/Add';
+// import PersonIcon from '@mui/icons-material/Person';
 
 const Footer = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
-  const logOut = () => {
-    localStorage.removeItem("auth");
-    navigate("/login");
-  };
+  // const logOut = () => {
+  //   localStorage.removeItem("auth");
+  //   navigate("/login");
+  // };
   return (
     <footer>
       <nav>
