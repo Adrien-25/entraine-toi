@@ -6,8 +6,8 @@ import styles from "../styles/_profile.module.scss";
 import PersonIcon from "@mui/icons-material/Person";
 import FlecheDroite from "@mui/icons-material/KeyboardArrowRight";
 import CloseIcon from "@mui/icons-material/Close";
-import QuestionMarkIcon from "@mui/icons-material/QuestionMark";
-import NotificationsIcon from "@mui/icons-material/Notifications";
+// import QuestionMarkIcon from "@mui/icons-material/QuestionMark";
+// import NotificationsIcon from "@mui/icons-material/Notifications";
 import SettingsIcon from "@mui/icons-material/DisplaySettings";
 // import CreateIcon from "@mui/icons-material/Create";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
@@ -21,12 +21,12 @@ const Profil = () => {
   const navigateToReglages = () => {
     navigate("reglages-generaux");
   };
-  const navigateToNotifications = () => {
-    navigate("notifications");
-  };
-  const navigateToAide = () => {
-    navigate("aide");
-  };
+  // const navigateToNotifications = () => {
+  //   navigate("notifications");
+  // };
+  // const navigateToAide = () => {
+  //   navigate("aide");
+  // };
 
   const logOut = () => {
     localStorage.removeItem("auth");
@@ -92,7 +92,7 @@ const Profil = () => {
             <span>Réglages Généraux</span>
             <FlecheDroite color="white" />
           </li>
-          <li
+          {/* <li
             className={styles["personnalisation-item"]}
             onClick={navigateToNotifications}
           >
@@ -107,7 +107,7 @@ const Profil = () => {
             <QuestionMarkIcon />
             <span>Aide</span>
             <FlecheDroite color="white" />
-          </li>
+          </li> */}
           <li className={styles["personnalisation-item"]} onClick={logOut}>
             <CloseIcon />
             <span>Déconnexion</span>
