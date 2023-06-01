@@ -279,6 +279,9 @@ footer {
           color: $color-secondary-1;
           padding: 20px 0;
           width: 100%;
+          &.active{
+            color: $color-primary;
+          }
         }
       }
     }

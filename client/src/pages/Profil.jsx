@@ -35,7 +35,6 @@ const Profil = () => {
 
   return (
     <div className={styles.profile}>
-      <h1>Profil</h1>
       <div className={styles.presentation}>
         <div className={styles["general"]}>
           <div className={styles["imageProfil"]}>

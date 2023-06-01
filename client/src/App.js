@@ -10,7 +10,7 @@ import Login from "./pages/auth/Login";
 import Register from "./pages/auth/Register";
 import CreationEntrainement from "./pages/CreationEntrainement";
 import GestionEntrainement from "./pages/GestionEntrainement";
-import GestionDiete from "./pages/GestionDiete";
+import Diete from "./pages/Diete";
 import Profil from "./pages/Profil";
 
 import MesInformations from "./pages/profil/MesInformations";
@@ -74,7 +74,7 @@ function App() {
             path="/gestion-entrainement"
             element={<GestionEntrainement />}
           />
-          <Route path="/gestion-diete" element={<GestionDiete />} />
+          <Route path="/diete" element={<Diete />} />
 
           <Route path="/profil/" element={<Profil />} />
           <Route
@@ -86,7 +86,7 @@ function App() {
           <Route path="/profil/aide" element={<Aide />} />
         </Routes>
       </div>
-      {shouldRenderHeaderFooter && <Footer />}
+      {shouldRenderHeaderFooter && <Footer currentPath={location.pathname} />}
     </>
   );
 }
