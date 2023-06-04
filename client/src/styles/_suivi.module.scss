@@ -1,3 +1,154 @@
 @import "variables";
 
 /*---------------------- Suivi ------------------------*/
+.suivi {
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  .overviewContainer {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    position: relative;
+    > div {
+      background-color: $color-secondary-1;
+      border-radius: 10px;
+      padding: 10px 15px;
+      width: 100%;
+    }
+    .calorieOverview,
+    .trainingOverview,
+    .poidsOverview {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      p {
+        font-size: 10px;
+        span {
+          font-weight: bold;
+          font-size: 12px;
+        }
+      }
+      .number {
+        font-size: 18px;
+        font-weight: bold;
+      }
+
+      .weekTracking {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+      }
+    }
+    .calorieOverview,
+    .trainingOverview {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+
+      &.active {
+        position: relative;
+        opacity: 1;
+      }
+    }
+
+    .navButtons {
+      padding-top: 10px;
+      display: flex;
+      justify-content: center;
+      gap: 5px;
+      > div {
+        width: 6px;
+        height: 6px;
+        border-radius: 10px;
+        background-color: $color-secondary-2;
+        opacity: 0.5;
+        &.active {
+          width: 20px;
+          opacity: 1;
+        }
+      }
+    }
+  }
+  .progressContainer {
+    display: flex;
+    gap: 20px;
+    .trackerPas,
+    .trackerEau {
+      // .trackerPas,.trackerEau {
+      background-color: $color-secondary-1;
+      border-radius: 10px;
+      padding: 20px 15px 30px 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      .radialProgressBar {
+        @include radialProgressBar(
+          135px,
+          115px,
+          $color-secondary-2,
+          $color-secondary-1
+        );
+      }
+      .title {
+        display: flex;
+        gap: 5px;
+        img {
+          width: 20px;
+          height: 20px;
+        }
+      }
+      .buttonContainer {
+        color: #454545;
+        display: flex;
+        justify-content: center;
+        gap: 5px;
+        > svg {
+          font-size: 40px;
+        }
+      }
+    }
+  }
+  > div:not(.progressContainer, .overviewContainer) {
+    background-color: $color-secondary-1;
+    border-radius: 10px;
+    padding: 20px 15px 30px 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    > .title {
+      display: flex;
+      gap: 5px;
+      img {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+  .defiContainer {
+    .content {
+     display: flex;
+     flex-direction: column;
+     gap: 10px;
+     padding: 0 15px;
+      .entete{
+        display: flex;
+        gap: 5px;
+        img{
+          height: 15px;
+        }
+        p{
+          font-weight: bold;
+        }
+      }
+    }
+  }
+  .separator {
+    width: 100%;
+    height: 1px;
+    background-color: $color-secondary;
+    opacity: 0.1;
+  }
+}

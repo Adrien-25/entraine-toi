@@ -12,6 +12,7 @@ import CreationEntrainement from "./pages/CreationEntrainement";
 import GestionEntrainement from "./pages/GestionEntrainement";
 import Diete from "./pages/Diete";
 import Profil from "./pages/Profil";
+import Suivi from "./pages/Suivi";
 
 import MesInformations from "./pages/profil/MesInformations";
 import ReglagesGeneraux from "./pages/profil/ReglagesGeneraux";
@@ -75,6 +76,7 @@ function App() {
             element={<GestionEntrainement />}
           />
           <Route path="/diete" element={<Diete />} />
+          <Route path="/suivi" element={<Suivi />} />
 
           <Route path="/profil/" element={<Profil />} />
           <Route

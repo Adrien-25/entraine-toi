@@ -34,7 +34,7 @@ const Footer = ({ currentPath }) => {
             </a>
           </li>
           <li>
-            <a href="/calendar">
+            <a href="/suivi">
               <CalendarIcon />
             </a>
           </li>

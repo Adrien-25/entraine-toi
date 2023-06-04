@@ -12,3 +12,35 @@ $no-color: transparent;
 $font-family: "Poppins", sans-serif;
 
 $layout-breakpoint-small: 960px;
+
+@mixin radialProgressBar($w-h,$w-h2, $circle-color,$bg-color) {
+  border-radius: 50%;
+  width: $w-h;
+  height: $w-h;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: $circle-color;
+  margin: 0px;
+  float: left;
+  position: relative;
+   > .overlay {
+    border-radius: 50%;
+    width: $w-h2,;
+    height: $w-h2,;
+    margin: auto;
+    background-color: $bg-color;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    img{
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+// @mixin overlayProgressBar($width, $bg-color) {
+// }
